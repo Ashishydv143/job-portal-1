@@ -20,11 +20,10 @@ app.use(cookieParser())
 
 
 
-const corsOptions={
-    origin:'http://localhost:5173',
-    credentials:true
-}
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://jobsphere-l45w.onrender.com'], // Allowed origins
+    credentials: true, // Allow cookies and credentials
+}));
 
 
 // apis
